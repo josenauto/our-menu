@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Menu from "./Menu";
 import Categories from "./Categories";
 import items from "./data";
-import { Container, Row } from "reactstrap";
+import { Container} from "reactstrap";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
