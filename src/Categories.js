@@ -1,17 +1,20 @@
 import React from "react";
+import { Button } from 'reactstrap'
 
 const Categories = ({ categories, filterItems }) => {
   return (
-    <div>
+    <div className="text-center">
       {categories.map((category, index) => {
         return (
-          <button
+          <Button
+            color="primary"
+            className="category-btn"
             type="button"
             key={index}
             onClick={() => filterItems(category)}
           >
             {category}
-          </button>
+          </Button>
         );
       })}
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Menu from "./Menu";
 import Categories from "./Categories";
 import items from "./data";
+import { Container, Row } from "reactstrap";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
@@ -19,15 +20,13 @@ function App() {
   };
 
   return (
-    <div>
-      <section>
-        <div>
-          <h2>Our Menu</h2>
-        </div>
-        <Categories categories={categories} filterItems={filterItems} />
-        <Menu items={menuItems} />
-      </section>
-    </div>
+    <Container>
+      <h1 className="text-center">Our Menu</h1>
+
+      <Categories categories={categories} filterItems={filterItems} />
+
+      <Menu items={menuItems} />
+    </Container>
   );
 }
 
